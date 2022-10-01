@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rikza Fatiyamulya</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div class="d-flex justify-content-center align-items-center bg-black min-vh-100">
+        <div class="container bg-white rounded-4 p-4 w-50">
+            <h2 class="text-center">COVID-19 TRACKER</h2>
+            <div class="d-flex justify-content-center align-items-center">
+                <input 
+                    id="countryInput" 
+                    type="text" 
+                    class="form-control rounded-5 m-2 w-50" 
+                    placeholder="Input Countries"
+                    onchange="onSubmit()"
+                    >
+                <button 
+                    class="btn btn-dark rounded-5 h-50"
+                    onsubmit="onSubmit()"
+                    >Get Data</button>
+            </div>
+            <div class="container d-flex flex-wrap justify-content-center w-auto">
+                
+                    <div class="card">
+                        <img src="./assets/active-case.png" class="card-img-top w-25 align-self-center m-2" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Active Cases</h5>
+                          <p id="cardActive" class="card-text">Number</p>
+                        </div>
+                    </div>
+
+                    <div class="card" >
+                        <img src="./assets/new.png" class="card-img-top w-25 align-self-center m-2" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">New Cases</h5>
+                          <p id="cardNew" class="card-text">Number</p>
+                        </div>
+                    </div>
+
+                    <div class="card" >
+                        <img src="./assets/recovered.png" class="card-img-top w-25 align-self-center m-2" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Recovered Cases</h5>
+                          <p  id="cardRecovered" class="card-text">Number</p>
+                        </div>
+                    </div>
+                
+                
+                
+                    <div class="card" >
+                        <img src="./assets/all.png" class="card-img-top w-25 align-self-center m-2" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Total Cases</h5>
+                          <p id="cardTotal" class="card-text">Number</p>
+                        </div>
+                    </div>
+
+                    <div class="card" >
+                        <img src="./assets/death.png" class="card-img-top w-25 align-self-center m-2" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Total Deaths</h5>
+                          <p id="cardDeath" class="card-text">Number</p>
+                        </div>
+                    </div>
+
+                    <div class="card" >
+                        <img src="./assets/test.png" class="card-img-top w-25 align-self-center m-2" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Total Total Tests</h5>
+                          <p id="cardTest" class="card-text">Number</p>
+                        </div>
+                    </div>
+                
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
+</body>
+</html>
