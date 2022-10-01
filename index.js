@@ -26,7 +26,7 @@ const onType = (e) => {
     textInput.classList.remove('error');
     dateInput.classList.remove('error');
     countries = textInput.value;
-    console.log(countries);
+    // console.log(countries);
     return countries;
 }
 
@@ -36,7 +36,7 @@ async function getData () {
         let chosenDate = String(showDate());
         const resp = await fetch(`https://covid-193.p.rapidapi.com/history?country=${countries}&day=${chosenDate}`, options)
         const data = await resp.json();
-        console.log(data.response[0].cases);
+        // console.log(data.response[0].cases);
         isFinish();
         return displayStats(data);;
     } catch(err) {
@@ -76,7 +76,7 @@ const showDate = () => {
     const dateInput = document.querySelector("#datePicker").value;
     let dateArray = dateInput.split('/')
     let newDate = `${dateArray[2]}-${dateArray[0]}-${dateArray[1]}`;
-    console.log(newDate);
+    // console.log(newDate);
     return newDate;
 }
 
@@ -89,7 +89,7 @@ const setDateInitialValue = () => {
 }
 
 const isFinish = () => {
-    console.log("IsLoading: error");
+    // console.log("IsLoading: error");
     document.querySelector("#loader").remove();
 }
 
