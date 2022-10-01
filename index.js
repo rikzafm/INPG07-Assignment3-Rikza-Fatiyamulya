@@ -20,6 +20,7 @@ const options = {
 const onType = (e) => {
     countries = textInput.value;
     console.log(countries);
+    textInput.classList.remove('error');
     return countries;
 }
 
@@ -31,6 +32,7 @@ async function getData () {
         return displayStats(data);
     } catch(err) {
         console.log("Failed to fetch data", err);
+        textInput.classList.add('error');
     }
 }
 
