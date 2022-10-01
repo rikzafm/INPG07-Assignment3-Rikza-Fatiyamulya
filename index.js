@@ -17,7 +17,7 @@ const datePicker = new Datepicker(dateInput, {
 const options = {
 	method: 'GET',
 	headers: {
-		'X-RapidAPI-Key': '0ddba9b71bmsh4985de8eba7fa5ap16d972jsn098e97beddec',
+		'X-RapidAPI-Key': 'INSERT API KEY', //https://rapidapi.com/api-sports/api/covid-193
 		'X-RapidAPI-Host': 'covid-193.p.rapidapi.com'
 	}
 };
@@ -88,6 +88,10 @@ const setDateInitialValue = () => {
     document.querySelector("#datePicker").value = today;
 }
 
+const setInitialCountry = () => {
+    textInput.value = "All"
+}
+
 const isFinish = () => {
     // console.log("IsLoading: error");
     document.querySelector("#loader").remove();
@@ -99,5 +103,11 @@ const onSubmit = () => {
     getData();
 }
 
-setDateInitialValue();
+const startup = () => {
+    setDateInitialValue();
+    setInitialCountry();
+    onSubmit();
+}
+
+startup();
 //by Rikza Fatiyamulya
