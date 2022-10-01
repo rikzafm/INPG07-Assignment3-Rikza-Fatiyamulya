@@ -9,8 +9,6 @@ const button = document.querySelector("button");
 
 let countries;
 
-
-
 const dateInput = document.querySelector("#datePicker");
 const datePicker = new Datepicker(dateInput, {
 
@@ -82,6 +80,14 @@ const showDate = () => {
     return newDate;
 }
 
+const setDateInitialValue = () => {
+    let currentdate = new Date();
+    let date = ("0" + currentdate.getDate()).slice(-2);
+    let month = ("0" + (currentdate.getMonth() + 1)).slice(-2);
+    let today = month  + "/" + date + "/" +  currentdate.getFullYear();
+    document.querySelector("#datePicker").value = today;
+}
+
 const isFinish = () => {
     console.log("IsLoading: error");
     document.querySelector("#loader").remove();
@@ -93,5 +99,5 @@ const onSubmit = () => {
     getData();
 }
 
-
+setDateInitialValue();
 //by Rikza Fatiyamulya
